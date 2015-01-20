@@ -52,7 +52,7 @@ void ADSR :: keyOn()
 void ADSR :: keyOff()
 {
   target_ = 0.0;
-  state_ = RELEASE;
+  state_ = ADSR_RELEASE;
 
   // FIXED October 2010 - Nick Donaldson
   // Need to make release rate relative to current value!!

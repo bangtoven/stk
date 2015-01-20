@@ -30,7 +30,7 @@ class ADSR : public Generator
     ATTACK,   /*!< Attack */
     DECAY,    /*!< Decay */
     SUSTAIN,  /*!< Sustain */
-    RELEASE,  /*!< Release */
+    ADSR_RELEASE,  /*!< Release */
     IDLE      /*!< Before attack / after release */
   };
 
@@ -144,7 +144,7 @@ inline StkFloat ADSR :: tick( void )
     lastFrame_[0] = value_;
     break;
 
-  case RELEASE:
+  case ADSR_RELEASE:
     value_ -= releaseRate_;
     if ( value_ <= 0.0 ) {
       value_ = 0.0;
