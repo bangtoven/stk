@@ -105,6 +105,9 @@ public:
   //! Query whether reading is complete.
   bool isFinished( void ) const { return finished_; };
 
+  //! Added by Jungho Bang
+  StkFloat getRate( void ) const { return rate_; };
+
   //! Set the data read rate in samples.  The rate can be negative.
   /*!
     If the rate value is negative, the data is read in reverse order.
